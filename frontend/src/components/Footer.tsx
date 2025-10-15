@@ -16,7 +16,6 @@ export default function Footer() {
               <li>✅ LeetCode</li>
               <li>✅ CodeForces</li>
               <li>✅ GeeksforGeeks</li>
-              <li>✅ HackerRank</li>
             </ul>
           </div>
 
@@ -34,7 +33,7 @@ export default function Footer() {
         <div className="mt-8 pt-8 border-t border-gray-200 dark:border-gray-700 text-center text-gray-600 dark:text-gray-400 text-sm">
           <p>&copy; 2025 Platform Analyser. Built for competitive programmers.</p>
           <p className="mt-2">
-            Made with ❤️ using React, Next.js, Node.js & AI
+            Made with ❤️ by Aayush Shrivastav using React, Next.js & AI
           </p>
         </div>
       </div>
