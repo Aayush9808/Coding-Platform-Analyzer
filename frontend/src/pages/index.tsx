@@ -58,7 +58,7 @@ export default function Home() {
                   Comprehensive coding analytics across multiple platforms
                 </p>
                 <p className="mt-4 text-gray-500 dark:text-gray-500">
-                  Analyze your LeetCode, CodeForces, GeeksforGeeks, and HackerRank profiles in one place
+                  Analyze your LeetCode, CodeForces, and GeeksforGeeks profiles in one place
                 </p>
               </div>
 

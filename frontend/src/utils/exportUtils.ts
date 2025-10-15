@@ -19,11 +19,9 @@ export const exportToPDF = (data: any) => {
   try {
     const doc = new jsPDF();
     
-    // Title
     doc.setFontSize(20);
     doc.text('Coding Analysis Report', 105, 20, { align: 'center' });
     
-    // Overall Stats Table
     doc.setFontSize(14);
     doc.text('Overall Statistics', 14, 35);
     autoTable(doc, {
@@ -40,7 +38,6 @@ export const exportToPDF = (data: any) => {
       ]
     });
     
-    // Platform Details
     const finalY = (doc as any).lastAutoTable.finalY || 100;
     doc.text('Platform Details', 14, finalY + 10);
     
@@ -88,7 +85,6 @@ export const exportToExcel = (data: any) => {
     const XLSX = require('xlsx');
     const wb = XLSX.utils.book_new();
     
-    // Overview Sheet
     const overviewData = [
       ['Metric', 'Value'],
       ['Total Problems', data.overall?.stats?.total || 0],
@@ -102,7 +98,6 @@ export const exportToExcel = (data: any) => {
     const ws1 = XLSX.utils.aoa_to_sheet(overviewData);
     XLSX.utils.book_append_sheet(wb, ws1, 'Overview');
     
-    // Platform Details Sheet
     const platformData = [['Platform', 'Total', 'Easy', 'Medium', 'Hard']];
     Object.entries(data.platforms || {}).forEach(([platform, pData]: [string, any]) => {
       if (!pData.error) {
@@ -132,7 +127,6 @@ export const exportToExcel = (data: any) => {
 export const exportShareLink = (data: any) => {
   const loading = showToast('Generating link...', 'loading');
   try {
-    // Extract usernames from the platforms data
     const profileParams: string[] = [];
     
     Object.entries(data.platforms || {}).forEach(([platform, pData]: [string, any]) => {
