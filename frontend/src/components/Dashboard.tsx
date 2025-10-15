@@ -3,7 +3,7 @@ import PlatformCards from './PlatformCards'
 import ChartsSection from './ChartsSection'
 import DuplicateAnalysis from './DuplicateAnalysis'
 import AIInsights from './AIInsights'
-import { exportToPDF, exportToExcel, generateShareLink } from '../utils/exportUtils'
+import { exportToPDF, exportToExcel, exportShareLink } from '../utils/exportUtils'
 
 interface DashboardProps {
   data: any
@@ -31,7 +31,7 @@ export default function Dashboard({ data, onReset }: DashboardProps) {
 
   const handleShareLink = () => {
     try {
-      generateShareLink(data);
+      exportShareLink(data);
     } catch (error) {
       alert('❌ Failed to generate share link. Please try again.');
       console.error('Share link error:', error);
