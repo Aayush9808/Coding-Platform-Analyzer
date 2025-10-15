@@ -1,244 +1,110 @@
-# 🚀 Platform Analyser - Multi-Platform Coding Analytics Dashboard
+# 🚀 Platform Analyser
 
-## Overview
-A comprehensive web application that aggregates and analyzes coding profiles across multiple competitive programming platforms (LeetCode, GeeksforGeeks, CodeForces, HackerRank, etc.) with AI-powered duplicate question detection.
+A comprehensive web application for analyzing coding profiles across multiple competitive programming platforms. Get unified statistics, track your progress, and discover duplicate problems you've solved.
 
-## 🎯 Key Features
+**� Live Demo:** [https://coding-platform-analyzer.vercel.app](https://coding-platform-analyzer.vercel.app)
 
-### 1. **Multi-Platform Integration**
-- LeetCode
-- GeeksforGeeks (GFG)
-- CodeForces
-- HackerRank
-- CodeChef
-- AtCoder
+**🔗 API Backend:** [https://platform-analyser-backend.onrender.com](https://platform-analyser-backend.onrender.com)
 
-### 2. **Intelligent Analytics**
-- **Overall Summary**: Aggregated statistics across all platforms
-- **Platform-Specific Analysis**: Detailed breakdown for each platform
-- **Difficulty Distribution**: Easy, Medium, Hard question counts
-- **Progress Tracking**: Submission history and streaks
-- **Topic-wise Analysis**: Data Structures, Algorithms, etc.
+---
 
-### 3. **AI-Powered Duplicate Detection**
-- Uses NLP (Natural Language Processing) to identify similar questions across platforms
-- Cosine similarity with TF-IDF vectorization
-- Optional: Integration with OpenAI/Gemini API for enhanced matching
-- Unified question count (e.g., "N-Queens" problem counted once across all platforms)
+## ✨ Features
 
-### 4. **Visual Analytics**
-- Interactive charts and graphs
-- Comparative analysis between platforms
-- Time-series progress tracking
-- Heatmaps for submission patterns
+- **Multi-Platform Support** - Analyze LeetCode, CodeForces, and GeeksforGeeks profiles in one place
+- **Unified Statistics** - See your total problems solved across all platforms
+- **Duplicate Detection** - Find which problems you've solved multiple times on different platforms
+- **AI-Powered Insights** - Get personalized feedback on your coding journey
+- **Visual Analytics** - Beautiful charts showing your progress and difficulty distribution
+- **Export Options** - Download your statistics as PDF or Excel, or share with a link
 
-## 🏗️ Tech Stack
+## 🎯 Supported Platforms
 
-### Frontend
-- **Framework**: React.js with Next.js
-- **Styling**: Tailwind CSS
-- **Charts**: Recharts / Chart.js
-- **State Management**: React Context / Redux
-- **UI Components**: shadcn/ui
+- ✅ LeetCode
+- ✅ CodeForces
+- ✅ GeeksforGeeks (GFG)
 
-### Backend
-- **Runtime**: Node.js
-- **Framework**: Express.js
-- **Database**: MongoDB (user data, cached results)
-- **Caching**: Redis
-- **Web Scraping**: Puppeteer, Cheerio, Axios
-- **AI/ML**: 
-  - TensorFlow.js / Python microservice
-  - Natural (NLP library)
-  - OpenAI API (optional)
+## �️ Tech Stack
 
-### DevOps & Tools
-- **API Documentation**: Swagger
-- **Testing**: Jest, Supertest
-- **Deployment**: Docker, Vercel/Netlify (Frontend), Railway/Heroku (Backend)
-- **CI/CD**: GitHub Actions
+**Frontend:**
+- Next.js 14 with TypeScript
+- Tailwind CSS for styling
+- Recharts for data visualization
+- jsPDF & xlsx for exports
 
-## 📁 Project Structure
+**Backend:**
+- Python with FastAPI
+- MongoDB Atlas for data storage
+- Beautiful Soup for web scraping
+- Sentence Transformers for AI analysis
 
-```
-Platform-Analyser/
-├── frontend/                  # Next.js React Application
-│   ├── public/
-│   ├── src/
-│   │   ├── components/       # Reusable UI components
-│   │   │   ├── Dashboard/
-│   │   │   ├── PlatformCard/
-│   │   │   ├── Charts/
-│   │   │   └── Analytics/
-│   │   ├── pages/           # Next.js pages
-│   │   ├── hooks/           # Custom React hooks
-│   │   ├── services/        # API service layer
-│   │   ├── utils/           # Utility functions
-│   │   └── styles/          # Global styles
-│   └── package.json
-│
-├── backend/                  # Express.js API
-│   ├── src/
-│   │   ├── controllers/     # Request handlers
-│   │   ├── services/        # Business logic
-│   │   │   ├── scrapers/   # Platform scrapers
-│   │   │   │   ├── leetcode.js
-│   │   │   │   ├── gfg.js
-│   │   │   │   ├── codeforces.js
-│   │   │   │   └── ...
-│   │   │   ├── analyzer.js  # Data aggregation
-│   │   │   └── duplicateDetector.js  # AI matching
-│   │   ├── models/          # Database models
-│   │   ├── routes/          # API routes
-│   │   ├── middleware/      # Auth, validation, etc.
-│   │   ├── config/          # Configuration files
-│   │   └── utils/           # Helper functions
-│   ├── tests/               # Unit & integration tests
-│   └── package.json
-│
-├── ml-service/              # Python microservice (optional)
-│   ├── app.py
-│   ├── models/
-│   │   └── question_matcher.py
-│   └── requirements.txt
-│
-├── docker-compose.yml
-└── README.md
-```
+**Deployment:**
+- Frontend: Vercel
+- Backend: Render
+- Database: MongoDB Atlas
 
-## 🚀 Getting Started
+## 🚀 Quick Start
 
 ### Prerequisites
-- Node.js (v18+)
-- MongoDB
-- Redis (optional, for caching)
-- Python 3.9+ (for ML service)
+- Node.js 18+
+- Python 3.11+
+- MongoDB (local or Atlas)
 
-### Installation
+### Local Development
 
 1. **Clone the repository**
 ```bash
-git clone <repository-url>
-cd Platform-Analyser
+git clone https://github.com/Aayush9808/Coding-Platform-Analyzer.git
+cd Coding-Platform-Analyzer
 ```
 
-2. **Install Frontend Dependencies**
+2. **Setup Backend**
+```bash
+cd backend
+pip install -r requirements.txt
+python app.py
+```
+
+3. **Setup Frontend**
 ```bash
 cd frontend
 npm install
+npm run dev
 ```
 
-3. **Install Backend Dependencies**
-```bash
-cd backend
-npm install
-```
+4. **Environment Variables**
 
-4. **Setup Environment Variables**
-
-Create `.env` files in both frontend and backend directories:
-
-**Backend `.env`:**
-```env
-PORT=5000
-MONGODB_URI=mongodb://localhost:27017/platform-analyser
-REDIS_URL=redis://localhost:6379
-JWT_SECRET=your_jwt_secret
-OPENAI_API_KEY=your_openai_key (optional)
-NODE_ENV=development
-```
-
-**Frontend `.env.local`:**
+Create `frontend/.env.local`:
 ```env
 NEXT_PUBLIC_API_URL=http://localhost:5000
 ```
 
-5. **Start Development Servers**
+Backend uses MongoDB connection from environment or defaults to localhost.
 
-```bash
-# Terminal 1 - Backend
-cd backend
-npm run dev
+## � Screenshots
 
-# Terminal 2 - Frontend
-cd frontend
-npm run dev
-```
+Visit the live demo to see it in action!
 
-6. **Access the Application**
-- Frontend: http://localhost:3000
-- Backend API: http://localhost:5000
+## 🎯 How It Works
 
-## 📊 Core Features Implementation
-
-### 1. User Profile Analysis
-Users input profile URLs:
-```
-LeetCode: https://leetcode.com/username
-CodeForces: https://codeforces.com/profile/username
-GeeksforGeeks: https://auth.geeksforgeeks.org/user/username
-```
-
-### 2. Data Aggregation
-- Fetch solved questions from each platform
-- Extract: problem name, difficulty, topics, submission date
-- Cache results to minimize API calls
-
-### 3. Duplicate Detection Algorithm
-```javascript
-// Pseudocode
-1. Extract all problem titles from all platforms
-2. Preprocess text (lowercase, remove special chars)
-3. Calculate TF-IDF vectors
-4. Compute cosine similarity between all pairs
-5. If similarity > threshold (0.85), mark as duplicate
-6. Create unified problem list
-```
-
-### 4. Analytics Dashboard
-- **Overall Stats**: Total unique problems, difficulty breakdown
-- **Platform Comparison**: Side-by-side comparison
-- **Progress Visualization**: Charts showing growth over time
-- **Recommendations**: Weak areas, suggested problems
-
-## 🎨 UI/UX Features
-
-- **Dark/Light Mode**
-- **Responsive Design** (Mobile-first)
-- **Real-time Updates**
-- **Export Reports** (PDF/CSV)
-- **Share Analytics** (Public profile links)
-
-## 🔐 Security Features
-
-- Rate limiting on API endpoints
-- Input validation and sanitization
-- CORS configuration
-- Secure authentication (JWT)
-- API key management
-
-## 📈 Future Enhancements
-
-- [ ] Contest calendar integration
-- [ ] Peer comparison (compare with friends)
-- [ ] AI-powered problem recommendations
-- [ ] Browser extension for quick access
-- [ ] Mobile app (React Native)
-- [ ] Email notifications for milestones
-- [ ] Integration with more platforms (LintCode, SPOJ)
+1. Enter your usernames for LeetCode, CodeForces, and/or GeeksforGeeks
+2. Click "Analyze Profiles" and wait while we fetch your data
+3. View your unified statistics, platform breakdowns, and AI insights
+4. Export or share your results
 
 ## 🤝 Contributing
 
-Contributions are welcome! Please read CONTRIBUTING.md for details.
+Contributions are welcome! Feel free to open issues or submit pull requests.
 
-## 📝 License
+## � License
 
-MIT License
+MIT License - feel free to use this project for learning or personal use.
 
-## 👨‍💻 Author
+## 👨‍� Created By
 
-Built by [Your Name] - [LinkedIn/GitHub Profile]
+**Aayush Shrivastav**
+
+Built with ❤️ using React, Next.js, Python & AI
 
 ---
 
-**Note**: This project is for educational purposes. Respect platform APIs and terms of service when scraping data.
+⭐ If you find this project useful, please consider giving it a star!
