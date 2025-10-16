@@ -104,7 +104,7 @@ export default function InputForm({ onAnalysisComplete, isLoading, setIsLoading,
       return sum + (Array.isArray(val) ? val.length : 1)
     }, 0)
 
-    toast.loading(`Analyzing ${totalAccounts} account${totalAccounts > 1 ? 's' : ''}...`, { id: 'analysis' })
+    toast.loading(`Analyzing ${totalAccounts} account${totalAccounts > 1 ? 's' : ''}... First load may take 30-60 seconds while server wakes up.`, { id: 'analysis', duration: Infinity })
 
     try {
       const data = await analyzeProfiles(validProfiles)

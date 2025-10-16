@@ -60,6 +60,13 @@ export default function Home() {
                 <p className="mt-4 text-gray-500 dark:text-gray-500">
                   Analyze your LeetCode, CodeForces, and GeeksforGeeks profiles in one place
                 </p>
+                
+                {/* Info Banner */}
+                <div className="mt-6 mx-auto max-w-2xl bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-800 rounded-lg p-4">
+                  <p className="text-sm text-blue-800 dark:text-blue-200">
+                    ℹ️ <strong>First-time users:</strong> The first analysis may take 30-60 seconds as our server wakes up (free tier limitation). Subsequent analyses will be much faster!
+                  </p>
+                </div>
               </div>
 
               <InputForm 
