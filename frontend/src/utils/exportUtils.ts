@@ -127,23 +127,39 @@ export const exportToExcel = (data: any) => {
 export const exportShareLink = (data: any) => {
   const loading = showToast('Generating link...', 'loading');
   try {
-    const profileParams: string[] = [];
+    // Group usernames by platform
+    const platformUsernames: { [key: string]: string[] } = {};
     
-    Object.entries(data.platforms || {}).forEach(([platform, pData]: [string, any]) => {
-      if (!pData.error && pData.accounts && Array.isArray(pData.accounts)) {
-        pData.accounts.forEach((acc: any) => {
-          if (acc.username) {
-            profileParams.push(`${platform.toLowerCase()}=${encodeURIComponent(acc.username)}`);
-          }
-        });
+    // Extract usernames from each platform
+    Object.entries(data.platforms || {}).forEach(([platformKey, pData]: [string, any]) => {
+      if (!pData || pData.error || !pData.username) return;
+      
+      // Handle both single account and multiple accounts
+      // For multiple accounts, platformKey will be like "leetcode_username"
+      const platform = platformKey.includes('_') 
+        ? platformKey.split('_')[0] 
+        : platformKey;
+      
+      // Add username to platform array
+      if (!platformUsernames[platform]) {
+        platformUsernames[platform] = [];
       }
+      platformUsernames[platform].push(pData.username);
     });
     
-    if (profileParams.length === 0) {
+    if (Object.keys(platformUsernames).length === 0) {
       loading.remove();
       showToast('No profiles found to share', 'error');
       return;
     }
+    
+    // Build URL parameters
+    const profileParams: string[] = [];
+    Object.entries(platformUsernames).forEach(([platform, usernames]) => {
+      usernames.forEach(username => {
+        profileParams.push(`${platform.toLowerCase()}=${encodeURIComponent(username)}`);
+      });
+    });
     
     const shareUrl = `${window.location.origin}?${profileParams.join('&')}`;
     
