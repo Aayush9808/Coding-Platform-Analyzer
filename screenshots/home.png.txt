@@ -1,0 +1,25 @@
+# Screenshot Placeholders
+
+The images in this directory are placeholders. 
+
+## To Add Real Screenshots:
+
+1. Visit https://coding-platform-analyzer.vercel.app
+2. Take screenshots of:
+   - Home page (home.png)
+   - Dashboard with results (dashboard.png)
+   - Charts section (charts.png)
+   - AI insights (ai-insights.png)
+   - Export buttons (export.png)
+
+3. Replace the placeholder text files with actual PNG images
+
+## Quick Screenshot Guide:
+
+**Windows:** Press `Win + Shift + S` to capture
+
+**Mac:** Press `Cmd + Shift + 4` to capture
+
+**Browser:** Press `F12` > `Ctrl+Shift+P` > Type "Capture screenshot"
+
+See screenshots/README.md for detailed instructions.
