@@ -48,3 +48,5 @@ logs
 
 # OS
 Thumbs.db
+frontend/.next/
+backend/__pycache__/
