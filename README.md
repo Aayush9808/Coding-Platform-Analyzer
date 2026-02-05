@@ -29,6 +29,24 @@
 
 </div>
 
+> **⚠️ IMPORTANT NOTICE - GeeksforGeeks Integration (Updated: February 2026)**
+> 
+> **GeeksforGeeks (GFG) support is currently unavailable** due to the removal of their public API endpoint (`practiceapi.geeksforgeeks.org/api/vr/user-stats`). This endpoint was deprecated by GeeksforGeeks in late 2024/early 2025 when they redesigned their platform.
+> 
+> **Current Status:**
+> - ✅ **LeetCode**: Fully functional with GraphQL API
+> - ✅ **CodeForces**: Fully functional with REST API
+> - ❌ **GeeksforGeeks**: API returns 404 (Not Found) - endpoint permanently removed
+> 
+> **What This Means:**
+> - The application will display an error message for GFG profiles
+> - LeetCode and CodeForces analysis work perfectly
+> - All other features (duplicate detection, AI insights, charts) are fully operational
+> 
+> **Future:** GFG integration will be restored if/when they provide a new public API. For now, the app focuses on LeetCode and CodeForces, which provide comprehensive competitive programming analytics.
+
+---
+
 ## ✨ Features
 
 <table>
@@ -37,9 +55,9 @@
 
 ### 🌐 Multi-Platform Support
 Seamlessly analyze profiles from:
-- 💻 **LeetCode** - Problem solving stats & difficulty breakdown
-- 🔷 **CodeForces** - Contest ratings & problem history
-- 📚 **GeeksforGeeks** - Practice problems & coding score
+- 💻 **LeetCode** - Problem solving stats & difficulty breakdown ✅
+- 🔷 **CodeForces** - Contest ratings & problem history ✅
+- 📚 **GeeksforGeeks** - Currently unavailable (API deprecated Feb 2026) ❌
 
 </td>
 <td width="50%">
@@ -56,7 +74,7 @@ Seamlessly analyze profiles from:
 <td width="50%">
 
 ### 🔍 Duplicate Detection
-- 🎯 **Smart Algorithm** (~85% accuracy)
+- 🎯 **Smart Algorithm** (Estimated/Assumption-based)
 - 🔗 **Cross-Platform Matching** of similar problems
 - 📊 **Visual Breakdown** of duplicate solutions
 - 💡 **Time-Saving Insights** on what you've already solved
@@ -349,7 +367,7 @@ graph TB
 |----------|:------:|-------------------|
 | 💻 **LeetCode** | ✅ Active | Problems solved, difficulty breakdown, submission stats, user profile |
 | 🔷 **CodeForces** | ✅ Active | Rating, rank, contest history, problem difficulty, solved problems |
-| 📚 **GeeksforGeeks** | ✅ Active | Practice problems, coding score, difficulty distribution, streak data |
+| 📚 **GeeksforGeeks** | ⚠️ Partial | Profile validation (stats limited due to API changes) |
 
 </div>
 
@@ -361,8 +379,8 @@ graph TB
 
 | Metric | Value | Description |
 |--------|:-----:|-------------|
-| 🌐 **Platforms Supported** | **3** | LeetCode, CodeForces, GeeksforGeeks |
-| 🎯 **Duplicate Detection Accuracy** | **~85%** | AI-powered matching algorithm |
+| 🌐 **Platforms Supported** | **3** | LeetCode, CodeForces, GeeksforGeeks (partial) |
+| 🎯 **Duplicate Detection** | **Estimated** | Assumption-based matching algorithm |
 | ⚡ **Data Processing Speed** | **< 5 sec** | Average analysis time per profile |
 | 📈 **Total Requests Handled** | **1000+** | Successfully analyzed profiles |
 | ✅ **Uptime** | **99%** | Reliable cloud deployment |
@@ -595,10 +613,9 @@ Any contributions you make are **greatly appreciated** ❤️
 
 | Issue | Description | Status |
 |-------|-------------|--------|
+| ⚠️ **GFG Limited Data** | GeeksforGeeks API changes limit available statistics | Partial Support |
 | ⏳ **Cold Start Delay** | First request may take 30-60s on free tier hosting | Known Limitation |
 | 🔄 **Rate Limiting** | Some platforms may limit scraping frequency | Implementing Cache |
-| 🎯 **Duplicate Detection** | ~85% accuracy due to problem name variations | Improving Algorithm |
-| 🌐 **GeeksforGeeks** | Requires profile to be public for data access | Platform Limitation |
 
 ---
 

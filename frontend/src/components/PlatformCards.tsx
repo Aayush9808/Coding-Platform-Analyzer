@@ -34,6 +34,25 @@ export default function PlatformCards({ platforms }: PlatformCardsProps) {
     <div className="space-y-4">
       <h3 className="text-2xl font-bold">Platform-Specific Analysis</h3>
       
+      {/* GFG Error Notice */}
+      {platforms.gfg && platforms.gfg.error && (
+        <div className="p-4 bg-yellow-50 dark:bg-yellow-900/20 border-l-4 border-yellow-500 rounded-lg">
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl">💚</span>
+            <div className="flex-1">
+              <h4 className="font-bold text-yellow-900 dark:text-yellow-100 mb-1">GeeksforGeeks (GFG) - Service Unavailable</h4>
+              <p className="text-sm text-yellow-800 dark:text-yellow-200 mb-2">
+                {platforms.gfg.error}
+              </p>
+              <p className="text-xs text-yellow-700 dark:text-yellow-300">
+                <strong>Technical Details:</strong> GeeksforGeeks deprecated their public API (practiceapi.geeksforgeeks.org/api/vr/user-stats) in February 2026. 
+                The endpoint now returns 404 Not Found. This affects all third-party integrations, not just this application.
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+      
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {Object.entries(platforms).map(([platformKey, platformData]: [string, any]) => {
           const info = platformInfo[platformKey]
@@ -101,24 +120,6 @@ export default function PlatformCards({ platforms }: PlatformCardsProps) {
           )
         })}
       </div>
-
-      {/* Error platforms */}
-      {Object.entries(platforms).some(([_, data]: [string, any]) => data.error) && (
-        <div className="card bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-300 dark:border-yellow-700">
-          <h4 className="font-semibold mb-2 text-yellow-900 dark:text-yellow-100">
-            ⚠️ Some platforms couldn't be analyzed:
-          </h4>
-          <ul className="text-sm text-yellow-800 dark:text-yellow-200 space-y-1">
-            {Object.entries(platforms)
-              .filter(([_, data]: [string, any]) => data.error)
-              .map(([platform, data]: [string, any]) => (
-                <li key={platform}>
-                  • <strong>{platformInfo[platform]?.name || platform}</strong>: {data.error}
-                </li>
-              ))}
-          </ul>
-        </div>
-      )}
     </div>
   )
 }

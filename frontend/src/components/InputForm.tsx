@@ -158,6 +158,20 @@ export default function InputForm({ onAnalysisComplete, isLoading, setIsLoading,
       </div>
 
       <form onSubmit={handleSubmit} className="space-y-6">
+        {/* GFG Unavailable Notice */}
+        <div className="p-4 bg-red-50 dark:bg-red-900/20 border-2 border-red-300 dark:border-red-700 rounded-lg">
+          <div className="flex items-start space-x-3">
+            <span className="text-2xl">⚠️</span>
+            <div className="flex-1">
+              <h3 className="font-bold text-red-900 dark:text-red-100 mb-1">GeeksforGeeks (GFG) Currently Unavailable</h3>
+              <p className="text-sm text-red-800 dark:text-red-200">
+                <strong>Update February 2026:</strong> GeeksforGeeks removed their public API (practiceapi.geeksforgeeks.org). 
+                GFG profiles will show an error message. <strong>LeetCode and CodeForces work perfectly!</strong>
+              </p>
+            </div>
+          </div>
+        </div>
+
         {platforms.map((platform) => (
           <div key={platform.id} className={`p-4 rounded-lg border ${platform.bgColor} ${platform.borderColor}`}>
             <div className="flex items-center justify-between mb-3">

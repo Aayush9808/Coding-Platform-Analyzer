@@ -251,8 +251,8 @@ if __name__ == "__main__":
     print("\n" + "="*60)
     print("🚀 Platform Analyser - Python Backend Starting...")
     print("="*60)
-    print(f"📍 API: http://localhost:5000")
-    print(f"📖 Docs: http://localhost:5000/docs")
+    print(f"📍 API: http://localhost:8001")
+    print(f"📖 Docs: http://localhost:8001/docs")
     print(f"🗄️  MongoDB: {MONGO_URI}")
     print(f"🌐 Platforms: LeetCode, CodeForces, GeeksforGeeks")
     print("="*60 + "\n")
@@ -260,7 +260,7 @@ if __name__ == "__main__":
     uvicorn.run(
         "app:app",
         host="0.0.0.0",
-        port=5000,
+        port=8001,
         reload=True,
         log_level="info"
     )

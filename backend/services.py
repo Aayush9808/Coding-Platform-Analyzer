@@ -236,17 +236,13 @@ class GFGScraper:
             return self._scrape_profile(username)
             
         except Exception as e:
-            print(f"GFG error for {username}: {str(e)}")
-            # Try web scraping as fallback
-            try:
-                return self._scrape_profile(username)
-            except:
-                return {
-                    'platform': 'gfg',
-                    'username': username,
-                    'error': str(e),
-                    'success': False
-                }
+            print(f"⚠️ GFG API error for {username}: {str(e)}")
+            return {
+                'platform': 'gfg',
+                'username': username,
+                'error': 'GeeksforGeeks API is currently unavailable. The platform recently changed their API structure. Please use LeetCode or CodeForces for now.',
+                'success': False
+            }
     
     def _scrape_profile(self, username: str) -> Dict:
         """Scrape GFG profile page"""
