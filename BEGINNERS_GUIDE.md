@@ -1,4 +1,5 @@
-# 🎓 Complete Beginner's Guide to Platform Analyser
+# 🎓 Complete Beginner's Guide to ProgProfile
+**Multi-Platform Coding Analytics Dashboard**
 
 ## 📖 Table of Contents
 1. [What is This Project?](#what-is-this-project)
@@ -27,7 +28,7 @@ Imagine you're solving coding problems on multiple websites:
 - Where you're strong/weak
 
 ### The Solution
-**Platform Analyser** = A website that:
+**ProgProfile** = A website that:
 1. Takes your usernames from different platforms
 2. Fetches all your solved problems
 3. Detects duplicate problems across platforms
@@ -40,7 +41,7 @@ You enter:
 - LeetCode username: "AayushShrivastav"
 - CodeForces username: "Aayush123"
 
-Platform Analyser shows:
+ProgProfile shows:
 ✅ LeetCode: 150 problems
 ✅ CodeForces: 100 problems
 ✅ Total: 250 problems
@@ -741,7 +742,7 @@ cd ..
 cd frontend
 cat > .env.local << EOF
 NEXT_PUBLIC_API_URL=http://localhost:8000
-NEXT_PUBLIC_APP_NAME=Platform Analyser
+NEXT_PUBLIC_APP_NAME=ProgProfile
 NEXT_PUBLIC_APP_VERSION=1.0.0
 EOF
 cd ..

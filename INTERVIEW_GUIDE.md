@@ -459,7 +459,7 @@ GET /
 ```json
 {
   "status": "running",
-  "service": "Platform Analyser API",
+  "service": "ProgProfile API",
   "version": "2.0.0",
   "backend": "Python/FastAPI",
   "timestamp": "2026-02-05T10:54:24.510580"

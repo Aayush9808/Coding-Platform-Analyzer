@@ -1,6 +1,6 @@
 @echo off
 echo ========================================
-echo   Platform Analyser - Complete Setup
+echo   ProgProfile - Complete Setup
 echo ========================================
 echo.
 echo This script will help you complete the deployment!

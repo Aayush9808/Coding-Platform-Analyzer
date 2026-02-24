@@ -14,7 +14,7 @@ services:
 
   redis:
     image: redis:alpine
-    container_name: platform-analyser-redis
+    container_name: progprofile-redis
     restart: unless-stopped
     ports:
       - "6379:6379"
@@ -40,7 +40,7 @@ services:
 
   frontend:
     build: ./frontend
-    container_name: platform-analyser-frontend
+    container_name: progprofile-frontend
     restart: unless-stopped
     ports:
       - "3000:3000"

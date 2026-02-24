@@ -1,4 +1,5 @@
-# 🎯 Resume Points for Platform Analyser Project
+# 🎯 Resume Points for ProgProfile Project
+**Multi-Platform Coding Analytics Dashboard**
 
 ## Project Overview
 **Multi-Platform Coding Analytics Dashboard** - A full-stack web application that aggregates and analyzes competitive programming profiles from multiple platforms (LeetCode, CodeForces, GeeksforGeeks, HackerRank) with AI-powered duplicate question detection.
@@ -10,7 +11,7 @@
 ### Option 1: Detailed Format
 
 ```
-Platform Analyser | Full-Stack Developer                    [Month Year - Present]
+ProgProfile | Full-Stack Developer                    [Month Year - Present]
 GitHub: [your-repo-link] | Live Demo: [deployed-link]
 
 • Developed a comprehensive MERN stack application analyzing 4+ competitive programming

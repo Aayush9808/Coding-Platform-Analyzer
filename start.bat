@@ -1,6 +1,6 @@
 @echo off
 echo ============================================
-echo   Starting Platform Analyser
+echo   Starting ProgProfile - Multi-Platform Coding Analytics
 echo ============================================
 echo.
 

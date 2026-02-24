@@ -1,7 +1,8 @@
 
 ╔══════════════════════════════════════════════════════════════════════════════╗
 ║                                                                              ║
-║                     🚀 PLATFORM ANALYSER PROJECT 🚀                          ║
+║                        🚀 PROGPROFILE PROJECT 🚀                             ║
+║              Multi-Platform Coding Analytics Dashboard                       ║
 ║                                                                              ║
 ║           Multi-Platform Coding Analytics with AI Duplicate Detection       ║
 ║                                                                              ║

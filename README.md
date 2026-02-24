@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=Platform+Analyser+%F0%9F%9A%80;Multi-Platform+Coding+Analytics;LeetCode+%7C+CodeForces+%7C+GFG" alt="Typing SVG" />
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=32&duration=3000&pause=1000&color=3B82F6&center=true&vCenter=true&width=600&lines=ProgProfile+%F0%9F%9A%80;Multi-Platform+Coding+Analytics;LeetCode+%7C+CodeForces+%7C+GFG" alt="Typing SVG" />
 
 <p align="center">
   <img src="https://img.shields.io/badge/Live_Demo-🚀_View_Now-success?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo"/>
@@ -454,7 +454,7 @@ GET /
 ```json
 {
   "status": "running",
-  "service": "Platform Analyser API",
+  "service": "ProgProfile API",
   "version": "2.0.0",
   "backend": "Python/FastAPI"
 }
@@ -738,7 +738,7 @@ Special thanks to:
 
 ---
 
-**[⬆ Back to Top](#-platform-analyser)**
+**[⬆ Back to Top](#-progprofile)**
 
 <p align="center">
   <img src="https://komarev.com/ghpvc/?username=Aayush9808&label=Profile%20Views&color=3B82F6&style=for-the-badge" alt="Profile Views" />

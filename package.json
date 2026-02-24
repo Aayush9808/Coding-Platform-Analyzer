@@ -1,5 +1,5 @@
 {
-  "name": "platform-analyser",
+  "name": "progprofile",
   "version": "1.0.0",
   "description": "Multi-Platform Coding Analytics Dashboard",
   "main": "index.js",

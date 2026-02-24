@@ -2,7 +2,7 @@
 
 ## How to Add Screenshots
 
-This folder should contain screenshots of the Platform Analyser application to be displayed in the README.
+This folder should contain screenshots of the ProgProfile application to be displayed in the README.
 
 ### Required Screenshots
 

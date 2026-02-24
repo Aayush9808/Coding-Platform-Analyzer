@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Platform Analyser - Multi-Platform Coding Analytics</title>
+        <title>ProgProfile - Multi-Platform Coding Analytics</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
       </Head>
 
@@ -52,7 +52,7 @@ export default function Home() {
             <div className="max-w-4xl mx-auto">
               <div className="text-center mb-12 animate-fade-in">
                 <h1 className="text-5xl font-bold mb-4 bg-gradient-to-r from-primary-600 to-purple-600 bg-clip-text text-transparent">
-                  Platform Analyser
+                  ProgProfile
                 </h1>
                 <p className="text-xl text-gray-600 dark:text-gray-400">
                   Comprehensive coding analytics across multiple platforms

@@ -16,7 +16,7 @@ from services import analyzer_service
 
 # FastAPI app
 app = FastAPI(
-    title="Platform Analyser API",
+    title="ProgProfile API",
     description="Multi-platform coding profile analyzer with AI insights",
     version="2.0.0"
 )
@@ -84,7 +84,7 @@ async def root():
     """Health check endpoint"""
     return {
         "status": "running",
-        "service": "Platform Analyser API",
+        "service": "ProgProfile API",
         "version": "2.0.0",
         "backend": "Python/FastAPI",
         "timestamp": datetime.now().isoformat()
@@ -249,7 +249,7 @@ async def internal_error_handler(request, exc):
 
 if __name__ == "__main__":
     print("\n" + "="*60)
-    print("🚀 Platform Analyser - Python Backend Starting...")
+    print("🚀 ProgProfile - Multi-Platform Coding Analytics")
     print("="*60)
     print(f"📍 API: http://localhost:8001")
     print(f"📖 Docs: http://localhost:8001/docs")
